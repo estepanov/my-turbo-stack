@@ -1,3 +1,5 @@
+[![lint-test-build-check](https://github.com/estepanov/my-turbo-stack/actions/workflows/lint-test-build-check.yml/badge.svg)](https://github.com/estepanov/my-turbo-stack/actions/workflows/lint-test-build-check.yml)
+
 # My Turborepo Stack
 
 This is an my customized starter Turborepo with multiple started from [kitchen sink official turborepo example](https://github.com/vercel/turbo/tree/main/examples/kitchen-sink).
