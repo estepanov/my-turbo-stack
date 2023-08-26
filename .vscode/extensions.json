@@ -1,5 +1,8 @@
 {
   "recommendations": [
+    // ai
+    "GitHub.copilot",
+
     // Linting / Formatting
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
