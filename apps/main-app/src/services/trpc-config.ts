@@ -1,7 +1,7 @@
 import { WithTRPCConfig } from '@trpc/next'
 import superjson from 'superjson'
 import { AppRouter } from 'trpc-api'
-import { httpBatchLink, loggerLink } from '@trpc/client'
+import { httpLink, loggerLink } from '@trpc/client'
 
 const PORT = process.env.PORT || 3000
 
@@ -20,7 +20,7 @@ export const commonSettings: WithTRPCConfig<AppRouter> = {
         process.env.NODE_ENV === 'development' ||
         (opts.direction === 'down' && opts.result instanceof Error),
     }),
-    httpBatchLink({
+    httpLink({
       url: `${getBaseUrl()}/api/trpc`,
     }),
   ],

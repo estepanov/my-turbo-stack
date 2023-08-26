@@ -31,6 +31,11 @@ const Page = () => {
   )
 }
 
+if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
+  const { worker } = require('../mocks/browser')
+  worker.start()
+}
+
 export default function Home() {
   return (
     <TRpcReactQueryProvider>
