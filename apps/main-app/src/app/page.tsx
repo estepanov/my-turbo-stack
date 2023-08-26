@@ -9,8 +9,7 @@ const Page = () => {
   return (
     <div className='container'>
       <h1 className='title'>
-        Store <br />
-        <span>Kitchen Sink</span>
+        my <span>turbo stack</span>
       </h1>
       <CounterButton />
       <p className='description'>
