@@ -1,6 +1,18 @@
 {
   // Formatting using Prettier by default for all languages
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // Linting using ESLint.
   "eslint.validate": [
@@ -9,7 +21,7 @@
     "typescript",
     "typescriptreact"
   ],
-
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.autoIndent": "full",
   "editor.formatOnPaste": true,

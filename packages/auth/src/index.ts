@@ -1,19 +1,15 @@
-import { type NextApiRequest, type NextApiResponse } from 'next'
-
 export type Session = {
   id: string
 }
 
-interface GetServerSessionParams {
-  req: NextApiRequest
-  res: NextApiResponse
+interface SessionParams {
+  sessionId?: string
 }
 
 export const getServerSession = async ({
-  req,
-  res,
-}: GetServerSessionParams): Promise<Session> => {
+  sessionId,
+}: SessionParams): Promise<Session> => {
   return Promise.resolve({
-    id: '123',
+    id: '123' + sessionId,
   })
 }

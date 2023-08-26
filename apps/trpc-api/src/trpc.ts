@@ -12,7 +12,7 @@ import { TRPCError, initTRPC } from '@trpc/server'
 import { type CreateNextContextOptions } from '@trpc/server/adapters/next'
 import superjson from 'superjson'
 import { ZodError } from 'zod'
-
+import { FetchCreateContextFnOptions } from '@trpc/server/adapters/fetch'
 /**
  * 1. CONTEXT
  *
@@ -47,11 +47,28 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
  * process every request that goes through your tRPC endpoint
  * @link https://trpc.io/docs/context
  */
-export const createTRPCContext = async (opts: CreateNextContextOptions) => {
+export const createTRPCNextContext = async (opts: CreateNextContextOptions) => {
   const { req, res } = opts
 
   // Get the session from the server using the unstable_getServerSession wrapper function
-  const session = await getServerSession({ req, res })
+  const session = await getServerSession({
+    sessionId: req.cookies.sessionId || '',
+  })
+
+  return createInnerTRPCContext({
+    session,
+  })
+}
+
+export const createTRPCFetchContext = async (
+  opts: FetchCreateContextFnOptions,
+) => {
+  const { req } = opts
+
+  // Get the session from the server using the unstable_getServerSession wrapper function
+  const session = await getServerSession({
+    sessionId: req.headers.get('cookies') || '',
+  })
 
   return createInnerTRPCContext({
     session,
@@ -64,7 +81,7 @@ export const createTRPCContext = async (opts: CreateNextContextOptions) => {
  * This is where the trpc api is initialized, connecting the context and
  * transformer
  */
-const t = initTRPC.context<typeof createTRPCContext>().create({
+const t = initTRPC.context<typeof createTRPCNextContext>().create({
   transformer: superjson,
   errorFormatter({ shape, error }) {
     return {

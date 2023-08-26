@@ -4,7 +4,7 @@ import { createTRPCRouter, publicProcedure } from '../trpc'
 
 export const postRouter = createTRPCRouter({
   all: publicProcedure.query(({ ctx }) => {
-    return { session: ctx?.session ? [1, 2, 3, 4, 5] : [1, 2] }
+    return { session: ctx.session ? [1, 2, 3, 4, 5] : [1, 2] }
   }),
   byId: publicProcedure
     .input(z.object({ id: z.string() }))
