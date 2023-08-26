@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from '..'
 
-
 describe('auth', () => {
   it('resolves with an id', async () => {
     const mockReq = {} as NextApiRequest

@@ -1,17 +1,7 @@
 {
   // Formatting using Prettier by default for all languages
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // Formatting using Prettier for JavaScript, overrides VSCode default.
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace"
-  },
+
   // Linting using ESLint.
   "eslint.validate": [
     "javascript",
@@ -19,8 +9,10 @@
     "typescript",
     "typescriptreact"
   ],
-  // Disable Jest autoRun as otherwise it will start running all tests the first time.
-  "jest.autoRun": "off",
+
+  "editor.formatOnSave": true,
+  "editor.autoIndent": "full",
+  "editor.formatOnPaste": true,
 
   // Debugging.
   "debug.javascript.unmapMissingSources": true,

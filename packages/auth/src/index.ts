@@ -9,7 +9,10 @@ interface GetServerSessionParams {
   res: NextApiResponse
 }
 
-export const getServerSession = async ({ req, res }: GetServerSessionParams): Promise<Session> => {
+export const getServerSession = async ({
+  req,
+  res,
+}: GetServerSessionParams): Promise<Session> => {
   return Promise.resolve({
     id: '123',
   })
