@@ -1,6 +1,6 @@
+import 'whatwg-fetch' // msw/trpc in tests needs fetch
 import '@testing-library/jest-dom'
 import { server } from './src/mocks/server'
-import { fetch } from 'whatwg-fetch' // msw/trpc in tests needs fetch
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen())
@@ -11,5 +11,3 @@ afterEach(() => server.resetHandlers())
 
 // Clean up after the tests are finished.
 afterAll(() => server.close())
-
-global.fetch = fetch
