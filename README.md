@@ -40,3 +40,4 @@ This Turborepo has some additional tools already setup for you:
 - [Jest](https://jestjs.io) test runner for all things JavaScript
 - [Prettier](https://prettier.io) for code formatting
 - VSCode shared settings with recommended extensions
+- GitHub action that runs `pnpm test`
