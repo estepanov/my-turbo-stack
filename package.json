@@ -9,7 +9,7 @@
     "test": "turbo test"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
+    "prettier": "^3.0.2",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10"
