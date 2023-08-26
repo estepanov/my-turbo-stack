@@ -1,8 +1,8 @@
-[![lint-test-build-check](https://github.com/estepanov/my-turbo-stack/actions/workflows/lint-test-build-check.yml/badge.svg)](https://github.com/estepanov/my-turbo-stack/actions/workflows/lint-test-build-check.yml)
-
 # My Turborepo Stack
 
-This is an my customized starter Turborepo with multiple started from [kitchen sink official turborepo example](https://github.com/vercel/turbo/tree/main/examples/kitchen-sink).
+[![lint-test-build-check](https://github.com/estepanov/my-turbo-stack/actions/workflows/lint-test-build-check.yml/badge.svg)](https://github.com/estepanov/my-turbo-stack/actions/workflows/lint-test-build-check.yml)
+
+This is an my customized starter Turborepo with multiple started from [kitchen sink official turborepo example](https://github.com/vercel/turbo/tree/main/examples/kitchen-sink). With tRPC client and NextJS app directory configuration setup via [wpcodevo](https://github.com/wpcodevo)'s [nextjs13-trpc-setup](https://github.com/wpcodevo/nextjs13-trpc-setup) example.
 
 ## Using this example
 
