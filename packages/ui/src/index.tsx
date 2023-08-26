@@ -1,2 +1,2 @@
 export { NewTabLink } from './NewTabLink'
-export { CounterButton } from './CounterButton'
+export { CounterButton, type CounterButtonProps } from './CounterButton'
