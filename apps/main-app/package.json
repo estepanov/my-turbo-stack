@@ -10,18 +10,29 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.33.0",
+    "@trpc/client": "^10.38.0",
+    "@trpc/next": "^10.38.0",
+    "@trpc/react-query": "^10.38.0",
+    "@trpc/server": "^10.38.0",
     "logger": "workspace:*",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*"
+    "trpc-api": "workspace:*",
+    "ui": "workspace:*",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.4",
     "@types/node": "^18.11.9",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint-config-custom": "workspace:*",
+    "jest": "^29.6.4",
+    "jest-environment-jsdom": "^29.6.4",
     "tsconfig": "workspace:*",
     "typescript": "^5.2.2"
   }

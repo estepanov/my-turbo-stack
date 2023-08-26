@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+      // Linting / Formatting
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      
+      // Testing
+      "orta.vscode-jest",
+  
+      // PR management / Reviewing
+      "github.vscode-pull-request-github",
+
+      // Debugging
+      "ms-vscode.vscode-js-profile-flame",
+    ]
+  }

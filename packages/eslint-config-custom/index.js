@@ -5,9 +5,5 @@ module.exports = {
       version: "detect",
     },
   },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
-  },
+  parserOptions: {},
 };
