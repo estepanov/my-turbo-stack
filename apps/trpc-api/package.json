@@ -17,7 +17,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@myturbostack/eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "workspace:*",
     "@myturbostack/tsconfig": "workspace:*",
     "eslint": "^8.48.0",
     "typescript": "^5.2.2"

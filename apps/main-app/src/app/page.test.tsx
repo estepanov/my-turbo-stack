@@ -15,7 +15,7 @@ describe('Page', () => {
     const { getByText } = render(<Page />)
     getByText('loading')
     await waitFor(() => {
-      getByText(result.toString())
+      expect(getByText(result.toString())).toBeTruthy()
     })
   })
 })

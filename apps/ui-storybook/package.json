@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "vite build",
-    "preview": "vite preview",
-    "build-storybook": "storybook build",
+    "build": "storybook build",
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
@@ -14,7 +12,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@myturbostack/eslint-config-custom": "workspace:*",
     "@myturbostack/tsconfig": "workspace:*",
     "@myturbostack/ui": "workspace:*",
     "@storybook/addon-actions": "^7.3.2",
@@ -31,6 +28,8 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.48.0",
+    "eslint-config-custom": "workspace:*",
     "serve": "^14.2.1",
     "storybook": "^7.3.2",
     "typescript": "^5.2.2",

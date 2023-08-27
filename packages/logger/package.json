@@ -16,13 +16,13 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "jest-presets/jest/node"
+    "preset": "@myturbostack/jest-presets/jest/node"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@types/node": "^18.11.9",
     "eslint": "^8.48.0",
-    "@myturbostack/eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "workspace:*",
     "jest": "^29.6.4",
     "@myturbostack/jest-presets": "workspace:*",
     "@myturbostack/tsconfig": "workspace:*",
