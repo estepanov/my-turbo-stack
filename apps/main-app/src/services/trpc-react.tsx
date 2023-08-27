@@ -1,5 +1,5 @@
 'use client'
-import type { AppRouter } from 'trpc-api'
+import type { AppRouter } from '@myturbostack/trpc-api'
 import { createTRPCReact } from '@trpc/react-query'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import React, { ReactNode, useState } from 'react'
@@ -24,4 +24,4 @@ export const TRpcReactQueryProvider = ({
   )
 }
 
-export { type RouterInputs, type RouterOutputs } from 'trpc-api'
+export { type RouterInputs, type RouterOutputs } from '@myturbostack/trpc-api'

@@ -1,6 +1,6 @@
 import { WithTRPCConfig } from '@trpc/next'
 import superjson from 'superjson'
-import { AppRouter } from 'trpc-api'
+import { AppRouter } from '@myturbostack/trpc-api'
 import { httpLink, loggerLink } from '@trpc/client'
 
 const PORT = process.env.PORT || 3000
