@@ -1,5 +1,5 @@
 {
-  "name": "auth",
+  "name": "@myturbostack/auth",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -16,16 +16,17 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "jest-presets/jest/node"
+    "preset": "@myturbostack/jest-presets/jest/node"
   },
   "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "@myturbostack/jest-presets": "workspace:*",
+    "@myturbostack/tsconfig": "workspace:*",
     "@types/jest": "^29.5.4",
     "@types/node": "^18.11.9",
     "eslint": "^8.48.0",
-    "eslint-config-custom": "workspace:*",
     "jest": "^29.6.4",
-    "jest-presets": "workspace:*",
-    "tsconfig": "workspace:*",
+    "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
 }

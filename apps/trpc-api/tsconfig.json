@@ -1,4 +1,4 @@
 {
-    "extends": "tsconfig/base.json",
-    "include": ["src", "index.ts", "transformer.ts"]
-  }
+  "extends": "@myturbostack/tsconfig/base.json",
+  "include": ["src", "index.ts", "transformer.ts"]
+}

@@ -7,7 +7,7 @@
  * The pieces you will need to use are documented accordingly near the end
  */
 
-import { getServerSession, type Session } from 'auth'
+import { getServerSession, type Session } from '@myturbostack/auth'
 import { TRPCError, initTRPC } from '@trpc/server'
 import { type CreateNextContextOptions } from '@trpc/server/adapters/next'
 import superjson from 'superjson'
@@ -48,7 +48,7 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
  * @link https://trpc.io/docs/context
  */
 export const createTRPCNextContext = async (opts: CreateNextContextOptions) => {
-  const { req, res } = opts
+  const { req } = opts
 
   // Get the session from the server using the unstable_getServerSession wrapper function
   const session = await getServerSession({

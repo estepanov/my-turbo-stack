@@ -1,6 +1,8 @@
 import * as React from 'react'
 
-export const CounterButton = () => {
+export type CounterButtonProps = React.HTMLAttributes<HTMLButtonElement>
+
+export const CounterButton = (props: CounterButtonProps) => {
   const [count, setCount] = React.useState(0)
   return (
     <div
@@ -36,6 +38,7 @@ export const CounterButton = () => {
           }}
           type='button'
           onClick={() => setCount((c) => c + 1)}
+          {...props}
         >
           Count: {count}
         </button>

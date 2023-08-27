@@ -27,8 +27,6 @@
   ],
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "editor.autoIndent": "full",
-  "editor.formatOnPaste": true,
 
   // Debugging.
   "debug.javascript.unmapMissingSources": true,

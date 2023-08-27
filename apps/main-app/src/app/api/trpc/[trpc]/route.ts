@@ -1,5 +1,5 @@
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
-import { appRouter, createTRPCFetchContext } from 'trpc-api'
+import { appRouter, createTRPCFetchContext } from '@myturbostack/trpc-api'
 
 const handler = (request: Request) => {
   console.log(`incoming request ${request.url}`)

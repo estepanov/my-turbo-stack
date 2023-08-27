@@ -1,5 +1,5 @@
 {
-  "name": "logger",
+  "name": "@myturbostack/logger",
   "version": "0.0.0",
   "private": true,
   "main": "./dist/index.js",
@@ -16,7 +16,7 @@
     "test": "jest"
   },
   "jest": {
-    "preset": "jest-presets/jest/node"
+    "preset": "@myturbostack/jest-presets/jest/node"
   },
   "devDependencies": {
     "@types/jest": "^29.5.4",
@@ -24,8 +24,8 @@
     "eslint": "^8.48.0",
     "eslint-config-custom": "workspace:*",
     "jest": "^29.6.4",
-    "jest-presets": "workspace:*",
-    "tsconfig": "workspace:*",
+    "@myturbostack/jest-presets": "workspace:*",
+    "@myturbostack/tsconfig": "workspace:*",
     "typescript": "^5.2.2"
   }
 }

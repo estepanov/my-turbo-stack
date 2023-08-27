@@ -1,4 +1,4 @@
 module.exports = {
-  preset: 'jest-presets/jest/node',
+  preset: '@myturbostack/jest-presets/jest/node',
   testEnvironment: 'jsdom',
 }

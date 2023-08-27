@@ -1,6 +1,6 @@
 'use client'
-import { log } from 'logger'
-import { CounterButton, NewTabLink } from 'ui'
+import { log } from '@myturbostack/logger'
+import { CounterButton, NewTabLink } from '@myturbostack/ui'
 import { TRpcReactQueryProvider, trpc } from '../services/trpc-react'
 
 const Page = () => {
