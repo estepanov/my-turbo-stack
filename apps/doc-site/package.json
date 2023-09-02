@@ -25,7 +25,10 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.1",
+    "@docusaurus/types": "^2.4.1",
+    "@myturbostack/tsconfig": "workspace:^",
     "@tsconfig/docusaurus": "^1.0.5",
+    "@types/react": "^18.2.21",
     "typescript": "^5.2.2"
   },
   "browserslist": {
