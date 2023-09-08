@@ -7,20 +7,17 @@ RUN corepack enable
 COPY . /myturbostack
 WORKDIR /myturbostack
 RUN pnpm add -g turbo
-RUN turbo prune --scope="@myturbostack/main-app" --docker
-
-FROM base AS prod-deps
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+RUN turbo prune --scope="@myturbostack/doc-site" --docker
 
 FROM base AS build
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 RUN pnpm run -r build
 
-FROM base AS mainapp
+FROM base AS docsite
 COPY --from=build /myturbostack/out/json/ .
 COPY --from=build /myturbostack/out/pnpm-lock.yaml ./pnpm-lock.yaml
-COPY --from=prod-deps /myturbostack/node_modules/ /myturbostack/node_modules
-COPY --from=build /myturbostack/apps/main-app /myturbostack/apps/main-app
-WORKDIR /myturbostack/apps/main-app
+COPY --from=build /myturbostack/node_modules/ /myturbostack/node_modules
+COPY --from=build /myturbostack/apps/doc-site /myturbostack/apps/doc-site
+WORKDIR /myturbostack/apps/doc-site
 EXPOSE 3000
-CMD [ "pnpm", "start" ]
+CMD [ "pnpm", "run", "serve" ]

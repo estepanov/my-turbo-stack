@@ -8,7 +8,7 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       turbo:
-        specifier: latest
+        specifier: ^1.10.13
         version: 1.10.13
 
   apps/doc-site:

@@ -2,3 +2,5 @@ fly.toml
 Dockerfile
 .dockerignore
 .git
+.env
+.env.**

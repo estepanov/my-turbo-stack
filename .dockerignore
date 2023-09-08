@@ -1,1 +1,9 @@
 **/node_modules
+node_modules
+.git
+.gitignore
+*.md
+dist
+out
+.env
+.env.**
