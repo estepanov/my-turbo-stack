@@ -4,44 +4,75 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Time to get the ball rolling and start shipping everything under the **web app** sun in a single one repo.
+
+Do you want to get started bulding with a **turborepo** powered **typescripe** monorepo project setup with linting, tests, code formatting, github actions, vscode, nextjs, trpc, msw, docusaurus, and more!
+
+## Whats included
+
+`apps/`
+
+- `trpc-api`: a [tRPC](https://trpc.io/) server app (backend server agnostic, but currently runs in `main-app` nextjs server)
+- `main-app`: a [Next.js](https://nextjs.org/) app
+  - `msw`/`msw-trpc` configured for testing
+- `doc-site`: a [docusaurus](https://docusaurus.io/) markdown based documenation website
+
+`packages/`
+
+- `auth`: a placeholder package to handle auth. _no real logic here for now._
+- `logger`: isomorphic logger (a small wrapper around console.log) _no real logic here for now._
+- `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
+- `scripts`: Jest and ESLint configurations
+- `tsconfig`: tsconfig.json's used throughout the monorepo
 
 ## Getting Started
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Clone the repo, and get your project started!
 
 ### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
+- [Node.js](https://nodejs.org/en/download/) version 18 or above:
   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [pnmp](https://pnpm.io/) version 8 or above
 
 ## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+clone the project:
 
 ```bash
-npm init docusaurus@latest my-website classic
+git clone https://github.com/estepanov/my-turbo-stack.git my-custom-turbo-stack
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+open the project directory:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+```bash
+cd my-custom-turbo-stack
+```
+
+Install all dependencies
+
+```bash
+pnpm i
+```
 
 ## Start your site
 
 Run the development server:
 
 ```bash
-cd my-website
-npm run start
+pnpm dev
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+This boots all the apps into dev mode.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+If you want to boot a specifc app, such as the docusaurus app in `apps/doc-site`, then you can filter by app name:
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+```bash
+pnpm dev --filter doc-site
+```
+
+or if you just want to boot the nextjs app in `apps/main-site` you can run
+
+```bash
+pnpm dev --filter main-app
+```
