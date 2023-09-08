@@ -1,0 +1,10 @@
+name: Upload to CDN- Main app
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    steps:
