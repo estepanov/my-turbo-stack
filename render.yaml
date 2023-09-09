@@ -1,0 +1,17 @@
+services:
+  # A static site
+  - type: web
+    name: doc-site
+    runtime: static
+    buildCommand: pnpm install && pnpm run build
+    staticPublishPath: ./apps/doc-site/build
+    pullRequestPreviewsEnabled: false # optional
+    buildFilter:
+      paths:
+        - apps/doc-site/**
+      ignoredPaths:
+        - apps/doc-site/**/*.test.[js|ts|jsx|tsx]
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: deny

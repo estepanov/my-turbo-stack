@@ -15,6 +15,7 @@ Do you want to get started bulding with a **turborepo** powered **typescripe** m
 - `trpc-api`: a [tRPC](https://trpc.io/) server app (backend server agnostic, but currently runs in `main-app` nextjs server)
 - `main-app`: a [Next.js](https://nextjs.org/) app
   - `msw`/`msw-trpc` configured for testing
+  - `fly.toml`: fly.io configuration
 - `doc-site`: a [docusaurus](https://docusaurus.io/) markdown based documenation website
 
 `packages/`
@@ -24,6 +25,19 @@ Do you want to get started bulding with a **turborepo** powered **typescripe** m
 - `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
 - `scripts`: Jest and ESLint configurations
 - `tsconfig`: tsconfig.json's used throughout the monorepo
+
+`.vscode/`
+
+- `extensions.json`: a list of recommended vscode extensions
+- `settings.json`: a list of recommended vscode settings
+
+`pnpm-workspace.yaml`: pnpm workspace configuration
+
+`docker-compose.yaml`: docker compose configuration
+
+`prettier.config.js`: prettier configuration
+
+`render.yaml`: render.com configuration
 
 ## Getting Started
 
