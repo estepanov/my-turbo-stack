@@ -1,16 +1,12 @@
 {
   "recommendations": [
-    // ai
-    "GitHub.copilot",
-
-    // Linting / Formatting
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
+    "GitHub.copilot",
 
-    // PR management / Reviewing
     "github.vscode-pull-request-github",
-
-    // Debugging
-    "ms-vscode.vscode-js-profile-flame"
+    "ms-vscode.vscode-js-profile-flame",
+    "github.vscode-github-actions",
+    "github.github-vscode-theme"
   ]
 }

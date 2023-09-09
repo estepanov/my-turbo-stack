@@ -10,7 +10,7 @@ services:
       paths:
         - apps/doc-site/**
       ignoredPaths:
-        - apps/doc-site/**/*.test.[js|ts|jsx|tsx]
+        - apps/doc-site/**/*.test.*
     headers:
       - path: /*
         name: X-Frame-Options
