@@ -6,11 +6,12 @@
     "dev": "turbo dev --no-cache --concurrency 11  --continue",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
+    "start": "turbo start",
     "test": "turbo test"
   },
   "devDependencies": {
     "prettier": "^3.0.2",
-    "turbo": "latest"
+    "turbo": "^1.10.13"
   },
-  "packageManager": "pnpm@8.6.10"
+  "packageManager": "pnpm@8.3.1"
 }
