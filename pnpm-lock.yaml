@@ -182,7 +182,7 @@ importers:
   apps/ui-storybook:
     dependencies:
       '@myturbostack/forms':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/forms
       react:
         specifier: ^18.2.0
