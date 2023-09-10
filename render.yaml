@@ -15,3 +15,19 @@ services:
       - path: /*
         name: X-Frame-Options
         value: deny
+  # A static site
+  - type: web
+    name: ui-storybook
+    runtime: static
+    buildCommand: pnpm install && pnpm run build
+    staticPublishPath: ./apps/ui-storybook/build
+    pullRequestPreviewsEnabled: false # optional
+    buildFilter:
+      paths:
+        - apps/ui-storybook/**
+      ignoredPaths:
+        - apps/ui-storybook/**/*.test.*
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: deny
