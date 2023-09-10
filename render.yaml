@@ -20,7 +20,7 @@ services:
     name: ui-storybook
     runtime: static
     buildCommand: pnpm install && pnpm run build
-    staticPublishPath: ./apps/ui-storybook/build
+    staticPublishPath: ./apps/ui-storybook/storybook-static
     pullRequestPreviewsEnabled: false # optional
     buildFilter:
       paths:
