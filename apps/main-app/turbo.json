@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "outputs": [".next/**", "!.next/cache/**"],
-      "env": ["VERCEL_URL", "NODE_ENV"]
+      "env": ["VERCEL_URL", "NODE_ENV", "NEXT_PUBLIC_MSW"]
     }
   },
   "globalDependencies": [".env.local"]

@@ -24,13 +24,17 @@ const Page = () => {
         <p className='description'>error: {api.error?.data?.httpStatus}</p>
       )}
       {api?.data && (
-        <p className='description'>{api.data.session.toString()}</p>
+        <pre className='description'>{JSON.stringify(api.data)}</pre>
       )}
     </div>
   )
 }
 
-if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
+if (
+  process.env.NODE_ENV === 'development' &&
+  typeof window !== 'undefined' &&
+  process.env.NEXT_PUBLIC_MSW === 'enabled'
+) {
   const { worker } = require('../mocks/browser')
   worker.start()
 }

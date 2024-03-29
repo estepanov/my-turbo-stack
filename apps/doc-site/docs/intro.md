@@ -23,8 +23,10 @@ Do you want to get started bulding with a **turborepo** powered **typescripe** m
 - `auth`: a placeholder package to handle auth. _no real logic here for now._
 - `logger`: isomorphic logger (a small wrapper around console.log) _no real logic here for now._
 - `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
-- `scripts`: Jest and ESLint configurations
+- `eslint-config-custom`: ESLint configurations
+- `jest-presets`: Jest configurations
 - `tsconfig`: tsconfig.json's used throughout the monorepo
+- `forms`: a form library that uses `TanStack Form`[https://tanstack.com/form/latest]
 
 `.vscode/`
 
