@@ -26,7 +26,6 @@ Do you want to get started bulding with a **turborepo** powered **typescripe** m
 - `eslint-config-custom`: ESLint configurations
 - `jest-presets`: Jest configurations
 - `tsconfig`: tsconfig.json's used throughout the monorepo
-- `forms`: a form library that uses `TanStack Form`[https://tanstack.com/form/latest]
 
 `.vscode/`
 

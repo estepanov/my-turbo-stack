@@ -8,7 +8,6 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
-    "@myturbostack/forms": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -29,11 +28,11 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
-    "eslint": "^8.48.0",
+    "eslint": "^8.57.0",
     "eslint-config-custom": "workspace:*",
     "serve": "^14.2.1",
     "storybook": "^7.3.2",
-    "typescript": "^5.2.2",
+    "typescript": "^5.4.3",
     "vite": "^4.4.9"
   }
 }
