@@ -3,13 +3,14 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
-    "dev": "turbo dev --no-cache --concurrency 15  --continue",
+    "dev": "dotenv -- turbo dev --no-cache --concurrency 15  --continue",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo lint",
     "start": "turbo start",
     "test": "turbo test"
   },
   "devDependencies": {
+    "dotenv-cli": "latest",
     "prettier": "^3.2.5",
     "turbo": "^1.13.0"
   },
