@@ -1,47 +1,21 @@
 import * as React from 'react'
+import { Button } from 'react-daisyui'
 
-export type CounterButtonProps = React.HTMLAttributes<HTMLButtonElement>
-
-export const CounterButton = (props: CounterButtonProps) => {
+export const CounterButton = () => {
   const [count, setCount] = React.useState(0)
   return (
-    <div
-      style={{
-        background: `rgba(0,0,0,0.05)`,
-        borderRadius: `8px`,
-        padding: '1.5rem',
-        fontWeight: 500,
-      }}
-    >
+    <div className='card'>
       <p style={{ margin: '0 0 1.5rem 0' }}>
-        This component is from{' '}
-        <code
-          style={{
-            padding: '0.2rem 0.3rem',
-            background: `rgba(0,0,0,0.1)`,
-            borderRadius: '0.25rem',
-          }}
-        >
-          ui
-        </code>
+        This component is from <code>ui</code>
       </p>
       <div>
-        <button
-          style={{
-            background: 'black',
-            color: 'white',
-            border: 'none',
-            padding: '0.5rem 1rem',
-            borderRadius: '0.25rem',
-            display: 'inline-block',
-            cursor: 'pointer',
-          }}
+        <Button
+          color='neutral'
           type='button'
           onClick={() => setCount((c) => c + 1)}
-          {...props}
         >
           Count: {count}
-        </button>
+        </Button>
       </div>
     </div>
   )

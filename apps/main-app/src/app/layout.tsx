@@ -1,4 +1,5 @@
 import React from 'react'
+import '@myturbostack/ui/dist/index.css'
 import './styles.css'
 
 export default function RootLayout({

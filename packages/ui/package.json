@@ -5,20 +5,23 @@
   "license": "MIT",
   "sideEffects": false,
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "build": "tsup",
     "clean": "rm -rf dist .turbo",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "dev": "tsup",
     "lint": "eslint \"src/**/*.ts*\"",
     "test": "jest"
   },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
     "@myturbostack/jest-presets": "workspace:*",
     "@myturbostack/tsconfig": "workspace:*",
     "@testing-library/jest-dom": "^6.4.2",
@@ -27,15 +30,19 @@
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.9.0",
     "eslint": "^8.57.0",
+    "eslint-config-custom": "workspace:*",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
+    "tailwindcss": "^3.4.3",
     "ts-node": "^10.9.2",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3"
   },
   "dependencies": {
-    "react-dom": "^18.2.0"
+    "react-daisyui": "^5.0.0"
   }
 }

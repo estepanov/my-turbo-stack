@@ -1,2 +1,4 @@
-export { NewTabLink } from './NewTabLink'
-export { CounterButton, type CounterButtonProps } from './CounterButton'
+export * from './NewTabLink'
+export * from './CounterButton'
+
+import '../styles/globals.css'

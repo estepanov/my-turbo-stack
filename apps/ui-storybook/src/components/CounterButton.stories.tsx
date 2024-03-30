@@ -1,3 +1,5 @@
+import '@myturbostack/ui/dist/index.css'
+
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { CounterButton } from '@myturbostack/ui'
