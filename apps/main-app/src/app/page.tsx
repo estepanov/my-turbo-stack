@@ -1,6 +1,6 @@
 'use client'
 import { log } from '@myturbostack/logger'
-import { CounterButton, NewTabLink } from '@myturbostack/ui'
+import { HeroDemo } from '@myturbostack/ui'
 import { TRpcReactQueryProvider, trpc } from '../services/trpc-react'
 import { env } from '../env/client'
 
@@ -8,26 +8,20 @@ const Page = () => {
   log('Hey! This is Home.')
   const api = trpc.post.all.useQuery()
   return (
-    <div className='container'>
-      <h1 className='title'>
-        my <span>turbo stack</span>
-      </h1>
-      <CounterButton />
-      <p className='description'>
-        Built With{' '}
-        <NewTabLink href='https://turbo.build/repo'>Turborepo</NewTabLink> +{' '}
-        <NewTabLink href='https://nextjs.org/'>Next.js</NewTabLink>
-      </p>
-      {(api?.isLoading || api?.isFetching) && (
-        <p className='description'>loading</p>
-      )}
-      {api?.isError && (
-        <p className='description'>error: {api.error?.data?.httpStatus}</p>
-      )}
-      {api?.data && (
-        <pre className='description'>{JSON.stringify(api.data)}</pre>
-      )}
-    </div>
+    <>
+      <HeroDemo />
+      <div>
+        {(api?.isLoading || api?.isFetching) && (
+          <p className='text-white'>loading</p>
+        )}
+        {api?.isError && (
+          <p className='text-error'>error: {api.error?.data?.httpStatus}</p>
+        )}
+        {api?.data && (
+          <pre className='text-red'>{JSON.stringify(api.data)}</pre>
+        )}
+      </div>
+    </>
   )
 }
 

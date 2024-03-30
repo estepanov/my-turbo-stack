@@ -7,6 +7,7 @@ export default defineConfig((options: Options) => ({
   dts: true,
   entry: ['src/index.tsx'],
   format: ['cjs', 'esm'],
+  target: 'es2015',
   external: ['react', 'react-dom'],
   ...options,
 }))
