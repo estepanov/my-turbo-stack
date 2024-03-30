@@ -7,4 +7,5 @@ export default defineConfig((options: Options) => ({
   dts: true,
   clean: true,
   target: 'esnext',
+  sourcemap: true,
 }))
