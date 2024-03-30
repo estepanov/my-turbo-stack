@@ -2,6 +2,7 @@
   "name": "@myturbostack/main-app",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next .turbo .swc",
@@ -11,15 +12,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "@myturbostack/auth": "workspace:*",
     "@myturbostack/logger": "workspace:*",
     "@myturbostack/trpc-api": "workspace:*",
     "@myturbostack/ui": "workspace:*",
+    "@t3-oss/env-core": "^0.9.2",
     "@tanstack/react-query": "^4.33.0",
     "@trpc/client": "^10.45.2",
     "@trpc/next": "^10.45.2",
     "@trpc/react-query": "^10.45.2",
     "@trpc/server": "^10.45.2",
     "next": "^14.1.4",
+    "next-auth": "^4.24.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "superjson": "2.2.1",

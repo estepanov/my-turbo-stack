@@ -1,25 +1,40 @@
 {
   "name": "@myturbostack/trpc-api",
   "version": "0.1.0",
-  "main": "./index.ts",
+  "main": "./src/env.ts",
   "types": "./index.ts",
+  "files": [
+    "index.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts"
+    },
+    "./env": {
+      "import": "./src/env.ts",
+      "require": "./src/env.ts"
+    }
+  },
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
     "lint": "eslint --ext .ts,.tsx .",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@myturbostack/auth": "workspace:*",
+    "@t3-oss/env-core": "^0.9.2",
     "@trpc/client": "^10.45.2",
     "@trpc/server": "^10.45.2",
-    "@myturbostack/auth": "workspace:*",
     "superjson": "2.2.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
     "@myturbostack/tsconfig": "workspace:*",
     "eslint": "^8.57.0",
+    "eslint-config-custom": "workspace:*",
     "typescript": "^5.4.3"
   }
 }

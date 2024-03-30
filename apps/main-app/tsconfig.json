@@ -1,5 +1,7 @@
 {
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
   "extends": "@myturbostack/tsconfig/nextjs.json",
   "compilerOptions": {
     "strict": true,
@@ -10,5 +12,10 @@
       }
     ]
   },
-  "include": ["src", "next-env.d.ts", ".next/types/**/*.ts", "./jest.setup.ts"]
+  "include": [
+    "src",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "./jest.setup.ts"
+  ]
 }

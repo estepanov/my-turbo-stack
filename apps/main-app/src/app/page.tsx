@@ -2,6 +2,7 @@
 import { log } from '@myturbostack/logger'
 import { CounterButton, NewTabLink } from '@myturbostack/ui'
 import { TRpcReactQueryProvider, trpc } from '../services/trpc-react'
+import { env } from '../env/client'
 
 const Page = () => {
   log('Hey! This is Home.')
@@ -31,9 +32,9 @@ const Page = () => {
 }
 
 if (
-  process.env.NODE_ENV === 'development' &&
+  env.NEXT_PUBLIC_NODE_ENV === 'development' &&
   typeof window !== 'undefined' &&
-  process.env.NEXT_PUBLIC_MSW === 'enabled'
+  env.NEXT_PUBLIC_MSW === 'enabled'
 ) {
   const { worker } = require('../mocks/browser')
   worker.start()

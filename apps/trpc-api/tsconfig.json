@@ -1,4 +1,12 @@
 {
   "extends": "@myturbostack/tsconfig/base.json",
-  "include": ["src", "index.ts", "transformer.ts"]
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+  },
+  "include": [
+    "src",
+    "index.ts",
+    "transformer.ts"
+  ]
 }
