@@ -14,10 +14,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "eslint.workingDirectories": [
-    { "pattern": "apps/*/" },
-    { "pattern": "packages/*/" }
+    {
+      "pattern": "apps/*/"
+    },
+    {
+      "pattern": "packages/*/"
+    }
   ],
-
   // Linting using ESLint.
   "eslint.validate": [
     "javascript",
@@ -27,26 +30,24 @@
   ],
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-
   // Debugging.
   "debug.javascript.unmapMissingSources": true,
-
   "files.exclude": {
     "**/node_modules": false,
     "node_modules": true,
     "*[!test]**/node_modules": true
   },
-
   // Ensure enough terminal history is preserved when running tests.
   "terminal.integrated.scrollback": 10000,
-
   // Disable TypeScript surveys.
   "typescript.surveys.enabled": false,
-
   // Enable file nesting for unit test files.
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "*.ts": "$(capture).test.ts, $(capture).test.tsx",
     "*.tsx": "$(capture).test.ts, $(capture).test.tsx"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }

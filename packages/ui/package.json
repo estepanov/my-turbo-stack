@@ -24,7 +24,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup --env.NODE_ENV production",
     "clean": "rm -rf dist .turbo",
     "dev": "tsup --watch",
     "lint": "eslint \"src/**/*.ts*\"",

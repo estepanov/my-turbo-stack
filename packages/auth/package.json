@@ -30,7 +30,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "tsup",
+    "build": "tsup --env.NODE_ENV production",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "tsup --watch",
     "lint": "eslint \"src/**/*.ts*\"",
