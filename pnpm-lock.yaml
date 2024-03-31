@@ -212,6 +212,9 @@ importers:
       '@myturbostack/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      '@types/node':
+        specifier: ^20.11.30
+        version: 20.11.30
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom

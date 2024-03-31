@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@myturbostack/tsconfig": "workspace:*",
+    "@types/node": "^20.11.30",
     "eslint-config-custom": "workspace:*",
     "typescript": "^5.4.3"
   }
