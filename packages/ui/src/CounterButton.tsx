@@ -4,13 +4,14 @@ import { Button, Card } from 'react-daisyui'
 export const CounterButton = () => {
   const [count, setCount] = React.useState(0)
   return (
-    <Card imageFull>
+    <Card imageFull className='border-0'>
       <Card.Body className='space-y-2'>
         <p>
-          This component is from <code className='kbd'>ui</code>
+          This component is from{' '}
+          <code className='kbd text-base-content'>ui</code> package
         </p>
         <Card.Actions className='justify-center'>
-          <div className='flex flex-row h-full border border-neutral-content/10 justify-center items-center bg-neutral px-4 rounded-btn'>
+          <div className='flex flex-row h-full border border-neutral-content/20 justify-center items-center bg-base-100 px-4 rounded-btn text-base-content'>
             <div>
               Current count is{' '}
               <span className='font-bold text-primary'>{count}</span>

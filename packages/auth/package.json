@@ -6,22 +6,25 @@
   "source": "./src/index.ts",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/**"
+    "dist"
   ],
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
       "import": "./dist/index.js",
+      "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./env": {
       "require": "./dist/env.cjs",
       "import": "./dist/env.js",
+      "default": "./dist/env.js",
       "types": "./dist/env.d.ts"
     },
     "./options": {
       "require": "./dist/options.cjs",
       "import": "./dist/options.js",
+      "default": "./dist/options.js",
       "types": "./dist/options.d.ts"
     }
   },

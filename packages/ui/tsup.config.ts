@@ -1,13 +1,13 @@
 import { defineConfig, Options } from 'tsup'
 
 export default defineConfig((options: Options) => ({
-  clean: true,
   sourcemap: true,
-  legacyOutput: true,
   dts: true,
+  clean: true,
   entry: ['src/index.tsx'],
+  target: 'esnext',
   format: ['cjs', 'esm'],
-  target: 'es2015',
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'react-daisyui'],
+  skipNodeModulesBundle: true,
   ...options,
 }))

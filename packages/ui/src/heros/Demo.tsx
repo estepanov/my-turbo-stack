@@ -1,11 +1,11 @@
-import { Hero, Link } from 'react-daisyui'
-import { CounterButton } from '../CounterButton'
+import { Hero } from 'react-daisyui'
 import { NewTabLink } from '../NewTabLink'
+import { ReactNode } from 'react'
 
-export const HeroDemo = () => {
+export const HeroDemo = ({ actions }: { actions?: ReactNode }) => {
   return (
     <Hero
-      className='bg-center bg-cover bg-no-repeat bg-fixed bg-opacity-50 min-h-[80vh]'
+      className='bg-center bg-cover bg-no-repeat bg-fixed bg-opacity-50 min-h-[100vh]'
       style={{
         backgroundImage:
           'url(https://source.unsplash.com/random/800x600?nature)',
@@ -13,15 +13,13 @@ export const HeroDemo = () => {
     >
       <Hero.Overlay />
       <Hero.Content className='text-center'>
-        <div className='max-w-md space-y-8'>
-          <h1 className='text-5xl font-bold'>
+        <div className='space-y-12 max-w-2xl'>
+          <h1 className='text-5xl font-bold drop-shadow-lg shadow-white'>
             my{' '}
             <span className='font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary'>
               turbo stack
             </span>
           </h1>
-
-          <CounterButton />
 
           <p className='max-w-md p-4 bg-secondary/80 text-secondary-content rounded-box'>
             <span className='block font-extrabold mb-2'>Built With</span>
@@ -34,9 +32,9 @@ export const HeroDemo = () => {
             <NewTabLink href='https://tailwindcss.com/'>tailwindcss</NewTabLink>{' '}
             + <NewTabLink href='https://daisyui.com/'>Daisyui</NewTabLink>
           </p>
-          <Link className='btn' color='primary' href='/'>
-            Get Started
-          </Link>
+          <div className='flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0 justify-center items-center'>
+            {actions}
+          </div>
         </div>
       </Hero.Content>
     </Hero>

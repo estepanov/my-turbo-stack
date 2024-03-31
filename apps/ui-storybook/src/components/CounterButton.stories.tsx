@@ -1,4 +1,4 @@
-import '@myturbostack/ui/dist/index.css'
+import '@myturbostack/ui/index.css'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
