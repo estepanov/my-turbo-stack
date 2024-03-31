@@ -1,9 +1,9 @@
 'use client'
 import { log } from '@myturbostack/logger'
 import { HeroDemo } from '@myturbostack/ui'
-import { Link } from 'react-daisyui'
-import NextLink from 'next/link'
-import { TRpcReactQueryProvider, trpc } from '../services/trpc-react'
+import { PiBook, PiCoffee } from 'react-icons/pi'
+import { Divider, Link } from 'react-daisyui'
+import { trpc, TRpcReactQueryProvider } from '../services/trpc-react'
 import { env } from '../env/client'
 
 const Page = () => {
@@ -15,15 +15,21 @@ const Page = () => {
         actions={
           <>
             <Link
-              className='btn mx-1'
+              className='btn btn-neutral mx-1 btn-wide'
               color='primary'
               href='https://myturbostack.dev/'
             >
-              Documentation
+              <PiBook className='text-2xl' /> Documentation
             </Link>
-            <NextLink href='/dashboard' className='btn btn-primary mx-1'>
-              User Dashboard
-            </NextLink>
+            <Divider responsive vertical>
+              OR
+            </Divider>
+            <Link
+              href='https://www.buymeacoffee.com/estepanov'
+              className='btn btn-secondary mx-1 btn-wide'
+            >
+              Buy me a coffee <PiCoffee className='text-2xl' />
+            </Link>
           </>
         }
       />
@@ -32,10 +38,10 @@ const Page = () => {
           <p className='text-white'>loading</p>
         )}
         {api?.isError && (
-          <p className='text-error'>error: {api.error?.data?.httpStatus}</p>
+          <p className='text-error'>error: {JSON.stringify(api.error?.data)}</p>
         )}
         {api?.data && (
-          <pre className='text-red'>{JSON.stringify(api.data)}</pre>
+          <pre className='text-secondary'>{JSON.stringify(api.data)}</pre>
         )}
       </div>
     </>

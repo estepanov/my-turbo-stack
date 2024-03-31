@@ -1,7 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local", ".env"],
-  "globalEnv": ["PORT"],
+  "globalDependencies": [".env"],
+  "globalEnv": [
+    "PORT",
+    "VERCEL_URL",
+    "NODE_ENV",
+    "NEXT_PUBLIC_MSW",
+    "NEXTAUTH_SECRET",
+    "NEXTAUTH_URL"
+  ],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"]
