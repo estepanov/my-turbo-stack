@@ -8,7 +8,7 @@
  */
 
 import { getServerSession, type Session } from '@myturbostack/auth'
-import { TRPCError, initTRPC } from '@trpc/server'
+import { initTRPC, TRPCError } from '@trpc/server'
 // import { type CreateNextContextOptions } from '@trpc/server/adapters/next'
 import superjson from 'superjson'
 import { ZodError } from 'zod'

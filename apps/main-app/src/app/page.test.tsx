@@ -1,8 +1,8 @@
 import React from 'react'
 import { render, waitFor } from '@testing-library/react'
-import Page from './page'
 import { server } from '../mocks/server'
 import { trpcMsw } from '../mocks/trpc-msw'
+import Page from './page'
 
 describe('Page', () => {
   it('should render successfully', async () => {

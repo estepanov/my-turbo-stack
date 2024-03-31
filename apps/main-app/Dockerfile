@@ -3,6 +3,7 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 ENV NODE_MAJOR_VERSION="18"
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV SKIP_ENV_VALIDATION=true
 RUN corepack enable
 COPY . /myturbostack
 WORKDIR /myturbostack
@@ -17,6 +18,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 RUN pnpm run -r build
 
 FROM base AS mainapp
+ENV SKIP_ENV_VALIDATION=false
 COPY --from=build /myturbostack/out/json/ .
 COPY --from=build /myturbostack/out/pnpm-lock.yaml ./pnpm-lock.yaml
 COPY --from=prod-deps /myturbostack/node_modules/ /myturbostack/node_modules
